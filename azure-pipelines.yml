@@ -1,0 +1,39 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - /shared/*
+    - /test/*
+    exclude:
+    - README.md
+pr:
+  autoCancel: false
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - /shared/*
+    - /test/*
+    exclude:
+    - README.md
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- script: |
+    terraform -version
+    wget https://releases.hashicorp.com/terraform/$(tf_version)/terraform_$(tf_version)_linux_amd64.zip -q
+    unzip -q terraform_$(tf_version)_linux_amd64.zip
+    sudo mv terraform /usr/local/bin
+    terraform -version
+  displayName: 'Install terraform'
+
+- script: |
+    acr-sp-init.sh
+  workingDirectory: '$(modulePath)/setup'
+  displayName: 'Setup ACR and SP'
