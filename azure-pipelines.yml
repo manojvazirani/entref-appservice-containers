@@ -22,7 +22,7 @@ pr:
     - README.md
 
 pool:
-  vmImage: 'Ubuntu-18.04'
+  vmImage: 'Ubuntu-16.04'
 
 steps:
 - script: |
