@@ -21,13 +21,16 @@ pr:
     exclude:
     - README.md
 
+variables:
+  TF_VERSION: '0.11.13' # Terraform version
+
 pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
 - script: |
     terraform -version
-    wget https://releases.hashicorp.com/terraform/$(tf_version)/terraform_$(tf_version)_linux_amd64.zip -q
+    wget https://releases.hashicorp.com/terraform/$(TF_VERSION)/terraform_$(TF_VERSION)_linux_amd64.zip -q
     unzip -q terraform_$(tf_version)_linux_amd64.zip
     sudo mv terraform /usr/local/bin
     terraform -version
