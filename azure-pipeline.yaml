@@ -42,6 +42,6 @@ steps:
   displayName: 'Bash Script'
   inputs:
     targetType: filePath
-    filePath: './acr-sp-init-test.sh'
+    filePath: './tests/acr-sp-init-test.sh'
     workingDirectory: tests
 
