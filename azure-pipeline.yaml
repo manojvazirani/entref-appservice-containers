@@ -34,6 +34,7 @@ steps:
   displayName: 'Install terraform'
 
 - script: |
+    chmod +x acr-sp-init.sh
     acr-sp-init.sh
   workingDirectory: 'setup'
   displayName: 'Setup ACR and SP'
