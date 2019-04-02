@@ -34,8 +34,6 @@ steps:
   displayName: 'Install terraform'
 
 - script: |
-    pwd
-    chmod +x acr-sp-init.sh
     acr-sp-init.sh
-  workingDirectory: 'setup'
+  workingDirectory: '$(Agent.BuildDirectory)/setup'
   displayName: 'Setup ACR and SP'
