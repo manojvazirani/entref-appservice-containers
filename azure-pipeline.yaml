@@ -41,7 +41,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Azure CLI tests/acr-sp-init-test.sh'
   inputs:
-    azureSubscription: 'Dallas-Cobalt'
+    azureSubscription: 'Dallas - Managed Identity Auth'
     scriptPath: 'tests/acr-sp-init-test.sh'
     workingDirectory: tests
 
