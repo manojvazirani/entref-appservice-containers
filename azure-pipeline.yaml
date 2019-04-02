@@ -35,5 +35,5 @@ steps:
 
 - script: |
     acr-sp-init.sh
-  workingDirectory: './setup'
+  workingDirectory: 'setup'
   displayName: 'Setup ACR and SP'
