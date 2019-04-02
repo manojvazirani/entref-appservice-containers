@@ -41,5 +41,5 @@ steps:
   inputs:
     targetType: filePath
     filePath: './acr-sp-init-test.sh'
-    workingDirectory: setup
+    workingDirectory: test
   displayName: 'Test ACR and SP'
