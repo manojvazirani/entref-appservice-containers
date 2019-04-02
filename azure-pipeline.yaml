@@ -38,10 +38,11 @@ steps:
     terraform -version
   displayName: 'Install terraform'
 
-- task: Bash@3
-  displayName: 'Bash Script'
+- task: AzureCLI@1
+  displayName: 'Azure CLI tests/acr-sp-init-test.sh'
   inputs:
-    targetType: filePath
-    filePath: './tests/acr-sp-init-test.sh'
+    azureSubscription: 'Dallas-Cobalt'
+    scriptPath: 'tests/acr-sp-init-test.sh'
     workingDirectory: tests
+
 
