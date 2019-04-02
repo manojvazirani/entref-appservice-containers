@@ -39,8 +39,9 @@ steps:
   displayName: 'Install terraform'
 
 - task: Bash@3
+  displayName: 'Bash Script'
   inputs:
     targetType: filePath
     filePath: './acr-sp-init-test.sh'
-    workingDirectory: test
-  displayName: 'Test ACR and SP'
+    workingDirectory: tests
+
