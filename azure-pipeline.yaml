@@ -40,7 +40,6 @@ steps:
 - task: Bash@3
   inputs:
     targetType: filePath
-    filePath: './acr-sp-init.sh'
+    filePath: './acr-sp-init-test.sh'
     workingDirectory: setup
-  displayName: 'Setup ACR and SP'
-
+  displayName: 'Test ACR and SP'
