@@ -5,6 +5,7 @@ trigger:
     - master
   paths:
     include:
+    - /*
     - /shared/*
     - /test/*
     exclude:
