@@ -42,6 +42,7 @@ steps:
   displayName: 'Install terraform'
 
 - script: |
+    az login
     ./main.sh
   env:
     ARM_CLIENT_ID: $(ARM_CLIENT_ID)
