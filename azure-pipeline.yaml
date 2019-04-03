@@ -44,7 +44,12 @@ steps:
 - task: AzureCLI@1
   displayName: 'Execute Infratructure Tests'
   inputs:
-    azureSubscription: 'JUCOLON Microsoft Azure Internal Consumption (8ff258b7-0b3b-4827-b240-cb8cfab73615)'
+    azureSubscription: 'JUCOLON Microsoft Azure Internal Consumption'
     scriptPath: 'tests/main.sh'
     workingDirectory: tests
+  env:
+    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
+    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
+    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
+    ARM_TENANT_ID: $(ARM_TENANT_ID)
 
