@@ -42,7 +42,7 @@ steps:
   displayName: 'Install terraform'
 
 - script: |
-    ./tests/main.sh
+    ./main.sh
   env:
     ARM_CLIENT_ID: $(ARM_CLIENT_ID)
     ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
