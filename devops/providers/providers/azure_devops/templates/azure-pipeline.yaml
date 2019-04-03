@@ -25,6 +25,9 @@ pr:
 
 variables:
   TF_VERSION: '0.11.13' # Terraform version
+  TF_VAR_location: 'eastus'
+  TF_VAR_company: 'cobalt'
+
 
 pool:
   vmImage: 'Ubuntu-16.04'
@@ -39,10 +42,9 @@ steps:
   displayName: 'Install terraform'
 
 - task: AzureCLI@1
-  displayName: 'Azure CLI tests/acr-sp-init-test.sh'
+  displayName: 'Execute Infratructure Tests'
   inputs:
     azureSubscription: 'Dallas-Cobalt'
-    scriptPath: 'tests/acr-sp-init-test.sh'
+    scriptPath: 'tests/main.sh'
     workingDirectory: tests
-
 
