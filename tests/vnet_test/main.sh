@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-. ../assert.sh continue_on_error #  load test functions with continue_on_error/stop_on_error
+# . ../assert.sh continue_on_error #  load test functions with continue_on_error/stop_on_error
 
 export TF_VAR_location=eastus
 export TF_VAR_company=test
