@@ -1,4 +1,3 @@
-displayName: 'Terraform Deployment'
 trigger:
   batch: true
   branches:
