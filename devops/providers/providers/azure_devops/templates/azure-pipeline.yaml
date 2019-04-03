@@ -1,3 +1,4 @@
+displayName: 'Terraform Deployment'
 trigger:
   batch: true
   branches:
@@ -44,12 +45,7 @@ steps:
 - task: AzureCLI@1
   displayName: 'Execute Infratructure Tests'
   inputs:
-    azureSubscription: 'Dallas-Cobalt'
+    azureSubscription: 'JUCOLON Microsoft Azure Internal Consumption'
     scriptPath: 'tests/main.sh'
     workingDirectory: tests
-  env:
-    ARM_CLIENT_ID: $(ARM_CLIENT_ID)
-    ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
-    ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
-    ARM_TENANT_ID: $(ARM_TENANT_ID)
 
