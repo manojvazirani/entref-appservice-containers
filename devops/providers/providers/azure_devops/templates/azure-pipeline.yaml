@@ -43,6 +43,7 @@ steps:
 
 - script: |
     az login -u $(ARM_CLIENT_ID) -p $(ARM_CLIENT_SECRET) --service-principal --tenant $(ARM_TENANT_ID)
+    echo "Build Directory $(Build.SourcesDirectory)"
     ./main.sh
   env:
     ARM_CLIENT_ID: $(ARM_CLIENT_ID)
