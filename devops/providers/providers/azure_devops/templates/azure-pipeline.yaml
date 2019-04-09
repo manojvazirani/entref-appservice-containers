@@ -43,7 +43,7 @@ steps:
 
 - bash: |
     az login -u $(ARM_CLIENT_ID) -p $(ARM_CLIENT_SECRET) --service-principal --tenant $(ARM_TENANT_ID)
-    ./test/main.sh
+    ./main.sh
   env:
     ARM_CLIENT_ID: $(ARM_CLIENT_ID)
     ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
