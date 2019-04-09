@@ -44,13 +44,12 @@ steps:
 - script: |
     az login -u $(ARM_CLIENT_ID) -p $(ARM_CLIENT_SECRET) --service-principal --tenant $(ARM_TENANT_ID)
     echo "Build Directory $(Build.SourcesDirectory)"
-    ls -la
-    sh tests/main.sh
+    ./main.sh
   env:
     ARM_CLIENT_ID: $(ARM_CLIENT_ID)
     ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
     ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
     ARM_TENANT_ID: $(ARM_TENANT_ID)
-  workingDirectory: $(Build.SourcesDirectory)/tests
+  workingDirectory: $(Agent.BuildDirectory)/tests
   displayName: 'Execute Infratructure Tests'
 
