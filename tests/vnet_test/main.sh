@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+# set -euo pipefail
 
 # . ../assert.sh continue_on_error #  load test functions with continue_on_error/stop_on_error
 
