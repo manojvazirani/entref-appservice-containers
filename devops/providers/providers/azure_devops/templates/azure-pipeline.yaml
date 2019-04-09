@@ -41,19 +41,8 @@ steps:
     terraform -version
   displayName: 'Install terraform'
 
-# - bash: |
-#     az login -u $(ARM_CLIENT_ID) -p $(ARM_CLIENT_SECRET) --service-principal --tenant $(ARM_TENANT_ID)
-#     ./main.sh
-#   env:
-#     ARM_CLIENT_ID: $(ARM_CLIENT_ID)
-#     ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
-#     ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
-#     ARM_TENANT_ID: $(ARM_TENANT_ID)
-#   workingDirectory: tests
-#   displayName: 'Execute Infratructure Tests'
-
 - task: AzureCLI@1
-  displayName: 'Azure CLI tests/main.sh'
+  displayName: 'Validation Tests/main.sh'
   inputs:
     azureSubscription: 'Dallas-Cobalt'
     scriptPath: tests/main.sh
