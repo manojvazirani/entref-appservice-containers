@@ -59,5 +59,4 @@ steps:
     scriptPath: tests/main.sh
     addSpnToEnvironment: true
     workingDirectory: tests
-  enabled: false
 
